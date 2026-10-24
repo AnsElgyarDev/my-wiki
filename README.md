@@ -20,7 +20,6 @@ reference implementation.
 - [Topics](#topics)
 - [Repository Structure](#repository-structure)
 - [Anatomy of a Topic](#anatomy-of-a-topic)
-- [Documentation Standards](#documentation-standards)
 - [Running the Samples](#running-the-samples)
 - [Security Notes](#security-notes)
 - [Roadmap](#roadmap)
@@ -31,17 +30,21 @@ reference implementation.
 
 ## Motivation
 
-Backend engineering involves a large surface area: authentication, persistence, API design, caching, messaging, observability, and more. Most of it is learned once, applied for a while, and then partially forgotten until the next project needs it again.
+Most of what I learn in backend engineering is learned once, applied for a while, and then partially forgotten until the next project needs it again.
 
 This repository exists to solve that problem. It serves three purposes:
 
 1. **Long-term reference.** Each topic is written once, in my own words, so I can recover the full mental model quickly instead of re-reading documentation from scratch.
-2. **Learning by building.** Every topic is backed by a working implementation. If I cannot build it, I do not consider it understood.
+2. **Reusable code.** Every topic is backed by a working implementation that can be read, run, and adapted as a utility in other projects.
 3. **Engineering portfolio.** The repository is public so that the depth and consistency of the work can be evaluated directly.
 
-Topics are chosen based on what I use in real projects, what I tend to forget, and what I want to understand more deeply.
+Topics are independent of each other. They are chosen based on what I use in real projects, what I tend to forget, and what I want to understand more deeply.
 
 ---
+
+## Topics
+
+The table below reflects the current state of the wiki and is updated as work progresses.
 
 | Category | Topic | Status | Last Updated |
 |---|---|---|---|
@@ -73,11 +76,6 @@ my-wiki/
 ├── LICENSE
 ├── .gitignore
 │
-├── _template/                  Starting point for every new topic
-│   ├── README.md
-│   ├── diagrams/
-│   └── src/
-│
 ├── auth/
 │   ├── jwt/
 │   ├── refresh-tokens/
@@ -102,7 +100,7 @@ Every topic follows the same layout, so the structure is predictable and any top
 
 ```text
 auth/jwt/
-├── README.md                   The write-up (see outline below)
+├── README.md                   The write-up
 ├── diagrams/
 │   ├── jwt-structure.excalidraw    Editable source
 │   ├── jwt-structure.png           Rendered image used in the README
@@ -122,35 +120,7 @@ auth/jwt/
 | `diagrams/` | Source files and exported images. Sources are kept so diagrams remain editable. |
 | `src/` | A complete, buildable project. Not isolated snippets. |
 
-### Topic README outline
-
-Each topic README uses the following sections, in this order:
-
-1. **Overview**: what it is and where it is used.
-2. **The Problem It Solves**: the situation that existed before it.
-3. **Core Concepts**: terminology and the mental model, with diagrams.
-4. **How It Works**: the end-to-end flow.
-5. **Implementation**: step-by-step code with a short justification for each decision.
-6. **Architectural Notes and Trade-offs**: strengths, limitations, and alternatives.
-7. **Common Pitfalls and Best Practices**: mistakes to avoid.
-8. **Running the Sample**: commands and example requests with expected output.
-9. **References**: specifications and official documentation.
-
----
-
-## Documentation Standards
-
-A topic is only marked **Complete** when it satisfies every item below.
-
-- [ ] Explains the problem before the solution.
-- [ ] Includes at least one diagram for the core concept or flow.
-- [ ] Key code is included in the README as text, so it is searchable.
-- [ ] Includes a runnable project under `src/` that builds without modification.
-- [ ] States the target framework and package versions used.
-- [ ] Documents trade-offs and at least one alternative approach.
-- [ ] Lists common pitfalls.
-- [ ] Contains no real secrets, credentials, or personal data.
-- [ ] Cites primary sources (official docs, RFCs) in the references section.
+A topic is considered **Complete** when it explains the problem before the solution, includes at least one diagram, shows the key code as searchable text, ships a project under `src/` that builds without modification, documents trade-offs, and contains no real secrets.
 
 ---
 
@@ -188,15 +158,9 @@ Planned areas, in rough priority order:
 
 - [x] Authentication fundamentals (JWT)
 - [ ] Complete the authentication series (refresh tokens, RBAC, policies, OAuth 2.0)
-- [ ] API design essentials (error handling, pagination, versioning)
-- [ ] Data access and persistence (EF Core, indexing, transactions)
-- [ ] Architecture patterns (Clean Architecture, CQRS, Unit of Work)
-- [ ] Caching, background jobs, and messaging
-- [ ] Testing strategy (unit, integration, API tests)
-- [ ] Logging, monitoring, and observability
-- [ ] Containerization and CI/CD
+- [ ] MCP (Model Context Protocol)
 
-The roadmap reflects intent, not commitment, and changes as priorities shift.
+The roadmap reflects intent, not commitment, and changes as priorities shift. New topics are added as I come across them in real work.
 
 ---
 
