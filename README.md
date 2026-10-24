@@ -52,7 +52,6 @@ The table below reflects the current state of the wiki and is updated as work pr
 | Authentication | Refresh Tokens | In Progress | - |
 | Authentication | Role-Based Access Control | In Progress | - |
 | Authentication | Policy-Based Authorization | Planned | - |
-| Authentication | OAuth 2.0 and OpenID Connect | Planned | - |
 | AI | MCP (Model Context Protocol) | Planned | - |
 
 **Status definitions**
