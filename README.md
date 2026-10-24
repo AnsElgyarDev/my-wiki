@@ -6,7 +6,11 @@
 ![Focus](https://img.shields.io/badge/focus-backend%20engineering-blue)
 ![Stack](https://img.shields.io/badge/stack-ASP.NET%20Core-512BD4)
 
-A personal engineering knowledge base covering backend development concepts, with a design rationale, diagrams, and runnable reference implementations for each topic.
+My personal notes on backend topics I enjoy writing about, tend to forget,
+or simply want to have a clear reference for.
+
+Each topic is self-contained: a written explanation, diagrams, and a working
+reference implementation.
 
 ---
 
