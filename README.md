@@ -43,6 +43,51 @@ Topics are chosen based on what I use in real projects, what I tend to forget, a
 
 ---
 
+| Category | Topic | Status | Last Updated |
+|---|---|---|---|
+| Authentication | [JWT](auth/jwt) | Complete | 2026-10 |
+| Authentication | Refresh Tokens | In Progress | - |
+| Authentication | Role-Based Access Control | In Progress | - |
+| Authentication | Policy-Based Authorization | Planned | - |
+| Authentication | OAuth 2.0 and OpenID Connect | Planned | - |
+| AI | MCP (Model Context Protocol) | Planned | - |
+
+**Status definitions**
+
+| Status | Meaning |
+|---|---|
+| Planned | Identified as a future topic. No content yet. |
+| In Progress | Work has started. Content may be incomplete or inaccurate. |
+| Complete | Documentation, diagrams, and a working sample are all present and reviewed. |
+| Needs Revision | Previously complete, but outdated or flagged for improvement. |
+
+---
+
+## Repository Structure
+
+Topics are grouped into categories. Each topic is a self-contained directory.
+
+```text
+my-wiki/
+├── README.md
+├── LICENSE
+├── .gitignore
+│
+├── _template/                  Starting point for every new topic
+│   ├── README.md
+│   ├── diagrams/
+│   └── src/
+│
+├── auth/
+│   ├── jwt/
+│   ├── refresh-tokens/
+│   ├── role-based-access/
+│   └── ...
+│
+└── mcp/
+    └── ...
+```
+
 Naming conventions:
 
 - Directories use `lowercase-with-dashes`.
